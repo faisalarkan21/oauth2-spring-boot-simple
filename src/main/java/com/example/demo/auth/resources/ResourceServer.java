@@ -24,11 +24,6 @@ public class ResourceServer implements WebServerFactoryCustomizer<ConfigurableWe
         app.run(args);
     }
 
-    @GetMapping("/account")
-    public String getAccount() {
-        return "account 1";
-    }
-
     @Bean
     public ResourceServerTokenServices tokenService() {
         RemoteTokenServices tokenServices = new RemoteTokenServices();
